@@ -33,8 +33,20 @@ public class Employee {
 
     @Column(name = "citizenshipstatus")
     private String citizenshipstatus;
+   
+    @Column(name = "formadmissionnumber")
+    private String formadmissionnumber;
+    
+    @Column(name = "foreignpassportnumber")
+    private String foreignpassportnumber;
 
-    @Column(name = "city")
+    @Column(name = "countryofissuance")
+    private String countryofissuance;
+    
+    @Column(name = "expirationdate")
+    private String expirationdate;
+             
+	@Column(name = "city")
     private String city;
     
     @Column(name = "dateofbirth")
@@ -70,13 +82,43 @@ public class Employee {
     @Column(name = "zipcode")
     private String zipcode;
     
+  
     
     
     
     
     
-    
-    
+    public String getFormadmissionnumber() {
+		return formadmissionnumber;
+	}
+
+	public void setFormadmissionnumber(String formadmissionnumber) {
+		this.formadmissionnumber = formadmissionnumber;
+	}
+
+	public String getForeignpassportnumber() {
+		return foreignpassportnumber;
+	}
+
+	public void setForeignpassportnumber(String foreignpassportnumber) {
+		this.foreignpassportnumber = foreignpassportnumber;
+	}
+
+	public String getCountryofissuance() {
+		return countryofissuance;
+	}
+
+	public void setCountryofissuance(String countryofissuance) {
+		this.countryofissuance = countryofissuance;
+	}
+
+	public String getExpirationdate() {
+		return expirationdate;
+	}
+
+	public void setExpirationdate(String expirationdate) {
+		this.expirationdate = expirationdate;
+	}
 
 	public String getSocialSecurity() {
 		return SocialSecurity;
