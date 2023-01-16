@@ -32,8 +32,20 @@ public class Employee {
     private String aptnumber;
 
     @Column(name = "citizenshipstatus")
-    private String citizenshipstatus;
-   
+    private boolean citizenshipstatus;
+    
+    @Column(name = "noncitizennational")
+    private boolean noncitizennational;
+    
+
+
+	@Column(name = "lawfulpermanentresident")
+    private boolean lawfulpermanentresident;
+    
+    @Column(name = "authorizedalien")
+    private boolean authorizedalien;
+    
+    
     @Column(name = "formadmissionnumber")
     private String formadmissionnumber;
     
@@ -152,11 +164,13 @@ public class Employee {
 		this.aptnumber = aptnumber;
 	}
 
-	public String getCitizenshipstatus() {
+	
+
+	public boolean isCitizenshipstatus() {
 		return citizenshipstatus;
 	}
 
-	public void setCitizenshipstatus(String citizenshipstatus) {
+	public void setCitizenshipstatus(boolean citizenshipstatus) {
 		this.citizenshipstatus = citizenshipstatus;
 	}
 
@@ -264,5 +278,27 @@ public class Employee {
 		this.id = id;
 	}
 
+    public boolean isNoncitizennational() {
+		return noncitizennational;
+	}
 
+	public void setNoncitizennational(boolean noncitizennational) {
+		this.noncitizennational = noncitizennational;
+	}
+
+	public boolean isLawfulpermanentresident() {
+		return lawfulpermanentresident;
+	}
+
+	public void setLawfulpermanentresident(boolean lawfulpermanentresident) {
+		this.lawfulpermanentresident = lawfulpermanentresident;
+	}
+
+	public boolean isAuthorizedalien() {
+		return authorizedalien;
+	}
+
+	public void setAuthorizedalien(boolean authorizedalien) {
+		this.authorizedalien = authorizedalien;
+	}
 }
