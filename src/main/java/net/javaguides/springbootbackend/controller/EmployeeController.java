@@ -49,6 +49,7 @@ public class EmployeeController {
 
 		updateEmployee.setAptnumber(employeeDetails.getAptnumber());
 		updateEmployee.setCitizenshipstatus(employeeDetails.getCitizenshipstatus());
+
 		updateEmployee.setFormadmissionnumber(employeeDetails.getFormadmissionnumber());
 		updateEmployee.setForeignpassportnumber(employeeDetails.getForeignpassportnumber());
 		updateEmployee.setCountryofissuance(employeeDetails.getCountryofissuance());
