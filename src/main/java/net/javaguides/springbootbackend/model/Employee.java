@@ -15,92 +15,83 @@ import javax.persistence.*;
 @Table(name = "employees")
 public class Employee {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long id;
 
-    @Column(name = "socialsecurity")
-    private String SocialSecurity;
+	@Column(name = "socialsecurity")
+	private String SocialSecurity;
 
-    @Column(name = "address")
-    private String address;
+	@Column(name = "address")
+	private String address;
 
-    @Column(name = "alienauthorizationnumber")
-    private String alienauthorizationnumber;
-    
-    @Column(name = "aptnumber")
-    private String aptnumber;
+	@Column(name = "alienauthorizationnumber")
+	private String alienauthorizationnumber;
 
-    @Column(name = "citizenshipstatus")
-    private boolean citizenshipstatus;
-    
-    @Column(name = "noncitizennational")
-    private boolean noncitizennational;
-    
+	@Column(name = "aptnumber")
+	private String aptnumber;
+
+	@Column(name = "citizenshipstatus")
+	private String citizenshipstatus;
 
 
-	@Column(name = "lawfulpermanentresident")
-    private boolean lawfulpermanentresident;
-    
-    @Column(name = "authorizedalien")
-    private boolean authorizedalien;
-    
-    
-    @Column(name = "formadmissionnumber")
-    private String formadmissionnumber;
-    
-    @Column(name = "foreignpassportnumber")
-    private String foreignpassportnumber;
 
-    @Column(name = "countryofissuance")
-    private String countryofissuance;
-    
-    @Column(name = "expirationdate")
-    private String expirationdate;
-             
+
+	@Column(name = "formadmissionnumber")
+	private String formadmissionnumber;
+
+	@Column(name = "foreignpassportnumber")
+	private String foreignpassportnumber;
+
+	@Column(name = "countryofissuance")
+	private String countryofissuance;
+
+	@Column(name = "expirationdate")
+	private String expirationdate;
+
 	@Column(name = "city")
-    private String city;
-    
-    @Column(name = "dateofbirth")
-    private String dateofbirth;
+	private String city;
 
-    @Column(name = "employee_email")
-    private String employee_email;
+	@Column(name = "dateofbirth")
+	private String dateofbirth;
 
-    @Column(name = "employeesignature")
-    private String employeesignature;
-    
-    @Column(name = "employeesignaturedate")
-    private String employeesignaturedate;
+	@Column(name = "employee_email")
+	private String employee_email;
 
-    @Column(name = "firstname")
-    private String firstname;
+	@Column(name = "employeesignature")
+	private String employeesignature;
 
-    @Column(name = "lastname")
-    private String lastname;
-    
-    @Column(name = "middleinitial")
-    private String middleinitial;
+	@Column(name = "employeesignaturedate")
+	private String employeesignaturedate;
 
-    @Column(name = "otherlastname")
-    private String otherlastname;
+	@Column(name = "firstname")
+	private String firstname;
 
-    @Column(name = "state")
-    private String state;
-    
-    @Column(name = "telephone")
-    private String telephone;
+	@Column(name = "lastname")
+	private String lastname;
 
-    @Column(name = "zipcode")
-    private String zipcode;
-    
-  
-    
-    
-    
-    
-    
-    public String getFormadmissionnumber() {
+	@Column(name = "middleinitial")
+	private String middleinitial;
+
+	@Column(name = "otherlastname")
+	private String otherlastname;
+
+	@Column(name = "state")
+	private String state;
+
+	@Column(name = "telephone")
+	private String telephone;
+
+	@Column(name = "zipcode")
+	private String zipcode;
+
+
+
+
+
+
+
+	public String getFormadmissionnumber() {
 		return formadmissionnumber;
 	}
 
@@ -164,13 +155,13 @@ public class Employee {
 		this.aptnumber = aptnumber;
 	}
 
-	
 
-	public boolean isCitizenshipstatus() {
+
+	public String getCitizenshipstatus() {
 		return citizenshipstatus;
 	}
 
-	public void setCitizenshipstatus(boolean citizenshipstatus) {
+	public void setCitizenshipstatus(String citizenshipstatus) {
 		this.citizenshipstatus = citizenshipstatus;
 	}
 
@@ -278,27 +269,4 @@ public class Employee {
 		this.id = id;
 	}
 
-    public boolean isNoncitizennational() {
-		return noncitizennational;
-	}
-
-	public void setNoncitizennational(boolean noncitizennational) {
-		this.noncitizennational = noncitizennational;
-	}
-
-	public boolean isLawfulpermanentresident() {
-		return lawfulpermanentresident;
-	}
-
-	public void setLawfulpermanentresident(boolean lawfulpermanentresident) {
-		this.lawfulpermanentresident = lawfulpermanentresident;
-	}
-
-	public boolean isAuthorizedalien() {
-		return authorizedalien;
-	}
-
-	public void setAuthorizedalien(boolean authorizedalien) {
-		this.authorizedalien = authorizedalien;
-	}
 }
