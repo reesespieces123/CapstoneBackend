@@ -1,8 +1,8 @@
 package net.javaguides.i9section2.controller;
 
-import net.javaguides.springbootbackend.exception.ResourceNotFoundException;
-import net.javaguides.springbootbackend.model.Employee;
-import net.javaguides.springbootbackend.repository.EmployeeRepository;
+import net.javaguides.i9section2.exception.ResourceNotFoundException;
+import net.javaguides.i9section2.model.Representative;
+import net.javaguides.i9section2.repository.RepresentativeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -43,22 +43,22 @@ public class RepresentativeController {
                 .orElseThrow(() -> new ResourceNotFoundException("Employee not exist with id: " + id));
         //Using this area for LIST 1A -- duplicate naming conventions used... Identity and Employment Authorization
 
-        updateRepresentative.setDocumentTitle_A1(representativeDetails.getDocumentTitle1A());
-        updateRepresentative.setIssuingAuthority_A1(representativeDetails.getIssuingAuthority1A());
-        updateRepresentative.setDocumentNumber_A1(representativeDetails.getDocumentNumber1A());
-        updateRepresentative.setExpirationDate_A1(representativeDetails.getExpirationDate1A());
+        updateRepresentative.setDocumentTitle_A1(representativeDetails.getDocumentTitle_A1());
+        updateRepresentative.setIssuingAuthority_A1(representativeDetails.getIssuingAuthority_A1());
+        updateRepresentative.setDocumentNumber_A1(representativeDetails.getDocumentNumber_A1());
+        updateRepresentative.setExpirationDate_A1(representativeDetails.getExpirationDate_A1());
 
-        //Using this area for LIST 1B -- duplicate naming conventions used.. we need to distinguish between the different documents etc.
-        updateRepresentative.setDocumentTitle_A2(representativeDetails.getDocumentTitle1B());
-        updateRepresentative.setIssuingAuthority_A2(representativeDetails.getIssuingAuthority1B());
-        updateRepresentative.setDocumentNumber_A2(representativeDetails.getDocumentNumber1B());
-        updateRepresentative.setExpirationDate_A2(representativeDetails.getExpirationDate1B());
+        //Using this area for LIST 1B -- duplicate naming conventions used... we need to distinguish between the different documents etc.
+        updateRepresentative.setDocumentTitle_A2(representativeDetails.getDocumentTitle_A2());
+        updateRepresentative.setIssuingAuthority_A2(representativeDetails.getIssuingAuthority_A2());
+        updateRepresentative.setDocumentNumber_A2(representativeDetails.getDocumentNumber_A2());
+        updateRepresentative.setExpirationDate_A2(representativeDetails.getExpirationDate_A2());
 
         //Using this area for LIST 1C -- duplicate naming conventions used... we need to distinguish between the different documents etc.
-        updateRepresentative.setDocumentTitle_A3(representativeDetails.getDocumentTitle1C());
-        updateRepresentative.setIssuingAuthority_A3(representativeDetails.getIssuingAuthority1C());
-        updateRepresentative.setDocumentNumber_A3(representativeDetails.getDocumentNumber1C());
-        updateRepresentative.setExpirationDate_A3(representativeDetails.getExpirationDate1C());
+        updateRepresentative.setDocumentTitle_A3(representativeDetails.getDocumentTitle_A3());
+        updateRepresentative.setIssuingAuthority_A3(representativeDetails.getIssuingAuthority_A3());
+        updateRepresentative.setDocumentNumber_A3(representativeDetails.getDocumentNumber_A3());
+        updateRepresentative.setExpirationDate_A3(representativeDetails.getExpirationDate_A3());
 
         // Using this area for LIST B -- Identity
         updateRepresentative.setDocumentTitle_B(representativeDetails.getDocumentTitle_B());

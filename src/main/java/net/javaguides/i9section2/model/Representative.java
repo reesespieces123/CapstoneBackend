@@ -7,7 +7,6 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
-public class Representative {
 
 
     @Getter
@@ -17,10 +16,12 @@ public class Representative {
     @Entity
     @Table(name = "representative")
 
+    public class Representative {
+
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         private long id;
-//_A1
+        //_A1
         @Column(name = "DocumentTitle_A1")
         private String DocumentTitle_A1;
 
@@ -32,11 +33,9 @@ public class Representative {
 
         @Column(name = "ExpirationDate_A1")
         private String ExpirationDate_A1;
-// _A2
+        // _A2
         @Column(name = "DocumentTitle_A2")
         private String DocumentTitle_A2;
-
-
 
 
         @Column(name = "IssuingAuthority_A2")
@@ -60,7 +59,7 @@ public class Representative {
         @Column(name = "ExpirationDate_A3")
         private String ExpirationDate_A3;
 
-// Using this area for LIST B -- Identity
+        // Using this area for LIST B -- Identity
         @Column(name = "DocumentTitle_B")
         private String DocumentTitle_B;
 
@@ -76,7 +75,7 @@ public class Representative {
         @Column(name = "AdditionalInfo_B")
         private String AdditionalInfo_B;
 
-// Using this area for LIST C -- Employment Authorization
+        // Using this area for LIST C -- Employment Authorization
         @Column(name = "setId")
         private String setId;
 
@@ -127,69 +126,204 @@ public class Representative {
         @Column(name = "OrganizationZipCode")
         private String OrganizationZipCode;
 
-
-        public String getPreparerFirstName() {
-            return PreparerFirstName;
+        public long getId() {
+            return id;
         }
 
-        public void setPreparerFirstName(String preparerFirstName) {
-            PreparerFirstName = preparerFirstName;
+        public void setId(long id) {
+            this.id = id;
         }
 
-        public String getPreparerLastName() {
-            return PreparerLastName;
+        public String getDocumentTitle_A1() {
+            return DocumentTitle_A1;
         }
 
-        public void setPreparerLastName(String preparerLastName) {
-            PreparerLastName = preparerLastName;
+        public void setDocumentTitle_A1(String documentTitle_A1) {
+            DocumentTitle_A1 = documentTitle_A1;
         }
 
-        public String getPreparerAddress() {
-            return PreparerAddress;
+        public String getIssuingAuthority_A1() {
+            return IssuingAuthority_A1;
         }
 
-        public void setPreparerAddress(String preparerAddress) {
-            PreparerAddress = preparerAddress;
+        public void setIssuingAuthority_A1(String issuingAuthority_A1) {
+            IssuingAuthority_A1 = issuingAuthority_A1;
         }
 
-        public String getPreparerCity() {
-            return PreparerCity;
+        public String getDocumentNumber_A1() {
+            return DocumentNumber_A1;
         }
 
-        public void setPreparerCity(String preparerCity) {
-            PreparerCity = preparerCity;
+        public void setDocumentNumber_A1(String documentNumber_A1) {
+            DocumentNumber_A1 = documentNumber_A1;
         }
 
-        public String getPreparerState() {
-            return PreparerState;
+        public String getExpirationDate_A1() {
+            return ExpirationDate_A1;
         }
 
-        public void setPreparerState(String preparerState) {
-            PreparerState = preparerState;
+        public void setExpirationDate_A1(String expirationDate_A1) {
+            ExpirationDate_A1 = expirationDate_A1;
         }
 
-        public String getPreparerZipCode() {
-            return PreparerZipCode;
+        public String getDocumentTitle_A2() {
+            return DocumentTitle_A2;
         }
 
-        public void setPreparerZipCode(String preparerZipCode) {
-            PreparerZipCode = preparerZipCode;
+        public void setDocumentTitle_A2(String documentTitle_A2) {
+            DocumentTitle_A2 = documentTitle_A2;
         }
 
-        public String getPreparerStatus() {
-            return PreparerStatus;
+        public String getIssuingAuthority_A2() {
+            return IssuingAuthority_A2;
         }
 
-        public void setPreparerStatus(String preparerStatus) {
-            PreparerStatus = preparerStatus;
+        public void setIssuingAuthority_A2(String issuingAuthority_A2) {
+            IssuingAuthority_A2 = issuingAuthority_A2;
         }
 
-        public String getPreparerSignature() {
-            return PreparerSignature;
+        public String getDocumentNumber_A2() {
+            return DocumentNumber_A2;
         }
 
-        public void setPreparerSignature(String preparerSignature) {
-            PreparerSignature = preparerSignature;
+        public void setDocumentNumber_A2(String documentNumber_A2) {
+            DocumentNumber_A2 = documentNumber_A2;
+        }
+
+        public String getExpirationDate_A2() {
+            return ExpirationDate_A2;
+        }
+
+        public void setExpirationDate_A2(String expirationDate_A2) {
+            ExpirationDate_A2 = expirationDate_A2;
+        }
+
+        public String getDocumentTitle_A3() {
+            return DocumentTitle_A3;
+        }
+
+        public void setDocumentTitle_A3(String documentTitle_A3) {
+            DocumentTitle_A3 = documentTitle_A3;
+        }
+
+        public String getIssuingAuthority_A3() {
+            return IssuingAuthority_A3;
+        }
+
+        public void setIssuingAuthority_A3(String issuingAuthority_A3) {
+            IssuingAuthority_A3 = issuingAuthority_A3;
+        }
+
+        public String getDocumentNumber_A3() {
+            return DocumentNumber_A3;
+        }
+
+        public void setDocumentNumber_A3(String documentNumber_A3) {
+            DocumentNumber_A3 = documentNumber_A3;
+        }
+
+        public String getExpirationDate_A3() {
+            return ExpirationDate_A3;
+        }
+
+        public void setExpirationDate_A3(String expirationDate_A3) {
+            ExpirationDate_A3 = expirationDate_A3;
+        }
+
+        public String getDocumentTitle_B() {
+            return DocumentTitle_B;
+        }
+
+        public void setDocumentTitle_B(String documentTitle_B) {
+            DocumentTitle_B = documentTitle_B;
+        }
+
+        public String getIssuingAuthority_B() {
+            return IssuingAuthority_B;
+        }
+
+        public void setIssuingAuthority_B(String issuingAuthority_B) {
+            IssuingAuthority_B = issuingAuthority_B;
+        }
+
+        public String getDocumentNumber_B() {
+            return DocumentNumber_B;
+        }
+
+        public void setDocumentNumber_B(String documentNumber_B) {
+            DocumentNumber_B = documentNumber_B;
+        }
+
+        public String getExpirationDate_B() {
+            return ExpirationDate_B;
+        }
+
+        public void setExpirationDate_B(String expirationDate_B) {
+            ExpirationDate_B = expirationDate_B;
+        }
+
+        public String getAdditionalInfo_B() {
+            return AdditionalInfo_B;
+        }
+
+        public void setAdditionalInfo_B(String additionalInfo_B) {
+            AdditionalInfo_B = additionalInfo_B;
+        }
+
+        public String getSetId() {
+            return setId;
+        }
+
+        public void setSetId(String setId) {
+            this.setId = setId;
+        }
+
+        public String getDocumentTitle_C() {
+            return DocumentTitle_C;
+        }
+
+        public void setDocumentTitle_C(String documentTitle_C) {
+            DocumentTitle_C = documentTitle_C;
+        }
+
+        public String getIssuingAuthority_C() {
+            return IssuingAuthority_C;
+        }
+
+        public void setIssuingAuthority_C(String issuingAuthority_C) {
+            IssuingAuthority_C = issuingAuthority_C;
+        }
+
+        public String getDocumentNumber_C() {
+            return DocumentNumber_C;
+        }
+
+        public void setDocumentNumber_C(String documentNumber_C) {
+            DocumentNumber_C = documentNumber_C;
+        }
+
+        public String getExpirationDate_C() {
+            return ExpirationDate_C;
+        }
+
+        public void setExpirationDate_C(String expirationDate_C) {
+            ExpirationDate_C = expirationDate_C;
+        }
+
+        public String getRepresentativeSignature() {
+            return RepresentativeSignature;
+        }
+
+        public void setRepresentativeSignature(String representativeSignature) {
+            RepresentativeSignature = representativeSignature;
+        }
+
+        public String getRepresentativeSignDate() {
+            return RepresentativeSignDate;
+        }
+
+        public void setRepresentativeSignDate(String representativeSignDate) {
+            RepresentativeSignDate = representativeSignDate;
         }
 
         public String getPreparerSignatureDate() {
@@ -200,184 +334,70 @@ public class Representative {
             PreparerSignatureDate = preparerSignatureDate;
         }
 
-
-
-        public String getFormadmissionnumber() {
-            return formadmissionnumber;
+        public String getRepresentativeTitle() {
+            return RepresentativeTitle;
         }
 
-        public void setFormadmissionnumber(String formadmissionnumber) {
-            this.formadmissionnumber = formadmissionnumber;
+        public void setRepresentativeTitle(String representativeTitle) {
+            RepresentativeTitle = representativeTitle;
         }
 
-        public String getForeignpassportnumber() {
-            return foreignpassportnumber;
+        public String getRepresentativeFirstName() {
+            return RepresentativeFirstName;
         }
 
-        public void setForeignpassportnumber(String foreignpassportnumber) {
-            this.foreignpassportnumber = foreignpassportnumber;
+        public void setRepresentativeFirstName(String representativeFirstName) {
+            RepresentativeFirstName = representativeFirstName;
         }
 
-        public String getCountryofissuance() {
-            return countryofissuance;
+        public String getRepresentativeLastName() {
+            return RepresentativeLastName;
         }
 
-        public void setCountryofissuance(String countryofissuance) {
-            this.countryofissuance = countryofissuance;
+        public void setRepresentativeLastName(String representativeLastName) {
+            RepresentativeLastName = representativeLastName;
         }
 
-        public String getExpirationdate() {
-            return expirationdate;
+        public String getOrganizationName() {
+            return OrganizationName;
         }
 
-        public void setExpirationdate(String expirationdate) {
-            this.expirationdate = expirationdate;
+        public void setOrganizationName(String organizationName) {
+            OrganizationName = organizationName;
         }
 
-        public String getSocialSecurity() {
-            return SocialSecurity;
+        public String getOrganizationAddress() {
+            return OrganizationAddress;
         }
 
-        public void setSocialSecurity(String socialSecurity) {
-            this.SocialSecurity = socialSecurity;
+        public void setOrganizationAddress(String organizationAddress) {
+            OrganizationAddress = organizationAddress;
         }
 
-        public String getAddress() {
-            return address;
+        public String getOrganizationCity() {
+            return OrganizationCity;
         }
 
-        public void setAddress(String address) {
-            this.address = address;
+        public void setOrganizationCity(String organizationCity) {
+            OrganizationCity = organizationCity;
         }
 
-        public String getAlienauthorizationnumber() {
-            return alienauthorizationnumber;
+        public String getOrganizationState() {
+            return OrganizationState;
         }
 
-        public void setAlienauthorizationnumber(String alienauthorizationnumber) {
-            this.alienauthorizationnumber = alienauthorizationnumber;
+        public void setOrganizationState(String organizationState) {
+            OrganizationState = organizationState;
         }
 
-        public String getAptnumber() {
-            return aptnumber;
+        public String getOrganizationZipCode() {
+            return OrganizationZipCode;
         }
 
-        public void setAptnumber(String aptnumber) {
-            this.aptnumber = aptnumber;
+        public void setOrganizationZipCode(String organizationZipCode) {
+            OrganizationZipCode = organizationZipCode;
         }
-
-
-
-        public String getCitizenshipstatus() {
-            return citizenshipstatus;
-        }
-
-        public void setCitizenshipstatus(String citizenshipstatus) {
-            this.citizenshipstatus = citizenshipstatus;
-        }
-
-        public String getCity() {
-            return city;
-        }
-
-        public void setCity(String city) {
-            this.city = city;
-        }
-
-        public String getDateofbirth() {
-            return dateofbirth;
-        }
-
-        public void setDateofbirth(String dateofbirth) {
-            this.dateofbirth = dateofbirth;
-        }
-
-        public String getEmployee_email() {
-            return employee_email;
-        }
-
-        public void setEmployee_email(String employee_email) {
-            this.employee_email = employee_email;
-        }
-
-        public String getEmployeesignature() {
-            return employeesignature;
-        }
-
-        public void setEmployeesignature(String employeesignature) {
-            this.employeesignature = employeesignature;
-        }
-
-        public String getEmployeesignaturedate() {
-            return employeesignaturedate;
-        }
-
-        public void setEmployeesignaturedate(String employeesignaturedate) {
-            this.employeesignaturedate = employeesignaturedate;
-        }
-
-        public String getFirstname() {
-            return firstname;
-        }
-
-        public void setFirstname(String firstname) {
-            this.firstname = firstname;
-        }
-
-        public String getLastname() {
-            return lastname;
-        }
-
-        public void setLastname(String lastname) {
-            this.lastname = lastname;
-        }
-
-        public String getMiddleinitial() {
-            return middleinitial;
-        }
-
-        public void setMiddleinitial(String middleinitial) {
-            this.middleinitial = middleinitial;
-        }
-
-        public String getOtherlastname() {
-            return otherlastname;
-        }
-
-        public void setOtherlastname(String otherlastname) {
-            this.otherlastname = otherlastname;
-        }
-
-        public String getState() {
-            return state;
-        }
-
-        public void setState(String state) {
-            this.state = state;
-        }
-
-        public String getTelephone() {
-            return telephone;
-        }
-
-        public void setTelephone(String telephone) {
-            this.telephone = telephone;
-        }
-
-        public String getZipcode() {
-            return zipcode;
-        }
-
-        public void setZipcode(String zipcode) {
-            this.zipcode = zipcode;
-        }
-
-        public long getId() {
-            return id;
-        }
-
-        public void setId(long id) {
-            this.id = id;
-        }
-
     }
+
+
+
