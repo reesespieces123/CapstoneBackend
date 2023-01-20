@@ -67,6 +67,17 @@ public class EmployeeController {
 		updateEmployee.setTelephone(employeeDetails.getTelephone());
 		updateEmployee.setZipcode(employeeDetails.getZipcode());
 
+		updateEmployee.setPreparerStatus(employeeDetails.getPreparerStatus());
+		updateEmployee.setPreparerSignature(employeeDetails.getPreparerSignature());
+		updateEmployee.setPreparerSignatureDate(employeeDetails.getPreparerSignatureDate());
+		updateEmployee.setPreparerFirstName(employeeDetails.getPreparerFirstName());
+		updateEmployee.setPreparerLastName(employeeDetails.getPreparerLastName());
+		updateEmployee.setPreparerAddress(employeeDetails.getPreparerAddress());
+		updateEmployee.setPreparerCity(employeeDetails.getPreparerCity());
+		updateEmployee.setPreparerState(employeeDetails.getPreparerState());
+		updateEmployee.setPreparerZipCode(employeeDetails.getPreparerZipCode());
+
+
 		updateEmployee.setId(employeeDetails.getId());
 
 		employeeRepository.save(updateEmployee);
