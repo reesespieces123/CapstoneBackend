@@ -10,3 +10,4 @@ public class ResourceNotFoundException extends RuntimeException{
         super(message);
     }
 }
+// No plugin found for prefix 'spring-boot' in the current project and in the plugin groups [org.apache.maven.plugins, org.codehaus.mojo] available from the repositories
