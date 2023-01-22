@@ -3,7 +3,6 @@ com\bezkoder\springjwt\controllers\AuthController.class
 com\bezkoder\springjwt\payload\response\JwtResponse.class
 com\bezkoder\springjwt\payload\request\SignupRequest.class
 com\bezkoder\springjwt\security\services\UserDetailsServiceImpl.class
-com\bezkoder\springjwt\SpringBootSecurityJwtApplicationTests.class
 com\bezkoder\springjwt\models\ERole.class
 com\bezkoder\springjwt\payload\request\LoginRequest.class
 com\bezkoder\springjwt\security\jwt\JwtUtils.class
