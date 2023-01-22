@@ -85,9 +85,106 @@ public class Employee {
 	@Column(name = "zipcode")
 	private String zipcode;
 
+	//Adding Preparer Info
 
+	@Column(name = "PreparerStatus")
+	private String PreparerStatus;
 
+	@Column(name = "PreparerSignature")
+	private String PreparerSignature;
 
+	@Column(name = "PreparerSignatureDate")
+	private String PreparerSignatureDate;
+
+	@Column(name = "PreparerFirstName")
+	private String PreparerFirstName;
+
+	@Column(name = "PreparerLastName")
+	private String PreparerLastName;
+
+	@Column(name = "PreparerAddress")
+	private String PreparerAddress;
+
+	@Column(name = "PreparerCity")
+	private String PreparerCity;
+
+	@Column(name = "PreparerState")
+	private String PreparerState;
+
+	@Column(name = "PreparerZipCode")
+	private String PreparerZipCode;
+
+	public String getPreparerFirstName() {
+		return PreparerFirstName;
+	}
+
+	public void setPreparerFirstName(String preparerFirstName) {
+		PreparerFirstName = preparerFirstName;
+	}
+
+	public String getPreparerLastName() {
+		return PreparerLastName;
+	}
+
+	public void setPreparerLastName(String preparerLastName) {
+		PreparerLastName = preparerLastName;
+	}
+
+	public String getPreparerAddress() {
+		return PreparerAddress;
+	}
+
+	public void setPreparerAddress(String preparerAddress) {
+		PreparerAddress = preparerAddress;
+	}
+
+	public String getPreparerCity() {
+		return PreparerCity;
+	}
+
+	public void setPreparerCity(String preparerCity) {
+		PreparerCity = preparerCity;
+	}
+
+	public String getPreparerState() {
+		return PreparerState;
+	}
+
+	public void setPreparerState(String preparerState) {
+		PreparerState = preparerState;
+	}
+
+	public String getPreparerZipCode() {
+		return PreparerZipCode;
+	}
+
+	public void setPreparerZipCode(String preparerZipCode) {
+		PreparerZipCode = preparerZipCode;
+	}
+
+	public String getPreparerStatus() {
+		return PreparerStatus;
+	}
+
+	public void setPreparerStatus(String preparerStatus) {
+		PreparerStatus = preparerStatus;
+	}
+
+	public String getPreparerSignature() {
+		return PreparerSignature;
+	}
+
+	public void setPreparerSignature(String preparerSignature) {
+		PreparerSignature = preparerSignature;
+	}
+
+	public String getPreparerSignatureDate() {
+		return PreparerSignatureDate;
+	}
+
+	public void setPreparerSignatureDate(String preparerSignatureDate) {
+		PreparerSignatureDate = preparerSignatureDate;
+	}
 
 
 

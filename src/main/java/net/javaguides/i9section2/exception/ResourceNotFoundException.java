@@ -1,4 +1,4 @@
-package net.javaguides.springbootbackend.exception;
+package net.javaguides.i9section2.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -10,4 +10,3 @@ public class ResourceNotFoundException extends RuntimeException{
         super(message);
     }
 }
-// No plugin found for prefix 'spring-boot' in the current project and in the plugin groups [org.apache.maven.plugins, org.codehaus.mojo] available from the repositories
