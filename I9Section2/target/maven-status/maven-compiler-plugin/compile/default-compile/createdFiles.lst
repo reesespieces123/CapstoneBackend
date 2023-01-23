@@ -1,0 +1,5 @@
+net\javaguides\i9section2\controller\RepresentativeController.class
+net\javaguides\i9section2\repository\RepresentativeRepository.class
+net\javaguides\i9section2\SpringbootBackendApplication.class
+net\javaguides\i9section2\model\Representative.class
+net\javaguides\i9section2\exception\ResourceNotFoundException.class

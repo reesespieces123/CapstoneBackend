@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="I9Section2" />
         <module name="spring-boot-security-jwt" />
         <module name="springboot-backend" />
       </profile>
@@ -18,6 +19,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="I9Section2" options="-parameters" />
       <module name="spring-boot-security-jwt" options="-parameters" />
       <module name="springboot-backend" options="-parameters" />
       <module name="springbootbackend" options="-parameters" />
