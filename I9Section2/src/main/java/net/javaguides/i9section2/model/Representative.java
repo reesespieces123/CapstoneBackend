@@ -1,11 +1,12 @@
-/*package net.javaguides.i9section2.model;
+package net.javaguides.i9section2.model;
 
+import javax.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.*;
+//import javax.persistence.entity;
 
 
 
@@ -76,8 +77,7 @@ import javax.persistence.*;
         private String AdditionalInfo_B;
 
         // Using this area for LIST C -- Employment Authorization
-        @Column(name = "setId")
-        private String setId;
+
 
         @Column(name = "DocumentTitle_C")
         private String DocumentTitle_C;
@@ -270,13 +270,6 @@ import javax.persistence.*;
             AdditionalInfo_B = additionalInfo_B;
         }
 
-        public String getSetId() {
-            return setId;
-        }
-
-        public void setSetId(String setId) {
-            this.setId = setId;
-        }
 
         public String getDocumentTitle_C() {
             return DocumentTitle_C;
@@ -326,13 +319,7 @@ import javax.persistence.*;
             RepresentativeSignDate = representativeSignDate;
         }
 
-        public String getPreparerSignatureDate() {
-            return PreparerSignatureDate;
-        }
 
-        public void setPreparerSignatureDate(String preparerSignatureDate) {
-            PreparerSignatureDate = preparerSignatureDate;
-        }
 
         public String getRepresentativeTitle() {
             return RepresentativeTitle;
@@ -398,6 +385,6 @@ import javax.persistence.*;
             OrganizationZipCode = organizationZipCode;
         }
     }
-*/
+
 
 

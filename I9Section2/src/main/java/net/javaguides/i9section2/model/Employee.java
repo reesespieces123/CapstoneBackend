@@ -1,11 +1,11 @@
-/*package net.javaguides.i9section2.model;
+package net.javaguides.i9section2.model;
 
+import javax.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-import javax.persistence.*;
+//import javax.persistence.*;
 
 @Getter
 @Setter
@@ -64,11 +64,11 @@ public class Employee {
 	@Column(name = "employeesignaturedate")
 	private String employeesignaturedate;
 
-	@Column(name = "firstname")
-	private String firstname;
+	@Column(name = "first_name")
+	private String first_name;
 
-	@Column(name = "lastname")
-	private String lastname;
+	@Column(name = "last_name")
+	private String last_name;
 
 	@Column(name = "middleinitial")
 	private String middleinitial;
@@ -86,107 +86,80 @@ public class Employee {
 	private String zipcode;
 
 	//Adding Preparer Info
+	@Column(name = "preparestatus" )
+	private String preparestatus;
+	@Column (name = "preparersig")
+	private String preparesig;
+	@Column (name = "preparerdate")
+	private String preparerdate;
+	@Column (name= "preparerlast")
+	private String preparerlast;
+	@Column(name = "preparerfirst")
+	private String preparerfirst;
+	@Column(name = "prepareraddress")
+	private String prepareraddress;
+	@Column(name = "preparercity")
+	private String preparercity;
+	@Column(name = "preparerstate")
+	private String preparerstate;
+	@Column(name = "preparerzip")
+	private String preparerzip;
 
-	@Column(name = "PreparerStatus")
-	private String PreparerStatus;
+	public String getPreparerstatus() {
+		return preparestatus;
+	}
+	public void setPreparerstatus(String preparerstatus) {
+		this.preparestatus = preparerstatus;
+	}
+	public String getPreparersig() {
+		return preparesig;
+	}
+	public void setPreparersig(String preparersig) {
+		this.preparesig = preparersig;
+	}
+	public String getPreparerdate() {
+		return preparerdate;
+	}
+	public void setPreparerdate(String preparerdate) {
+		this.preparerdate = preparerdate;
+	}
+	public String getPreparerlast() {
+		return preparerlast;
+	}
+	public void setPreparerlast(String preparerlast) {
+		this.preparerlast = preparerlast;
+	}
+	public String getPreparerfirst() {
+		return preparerfirst;
+	}
+	public void setPreparerfirst(String preparerfirst) {
+		this.preparerfirst = preparerfirst;
+	}
+	public String getPrepareraddress() {
+		return prepareraddress;
+	}
+	public void setPrepareraddress(String prepareraddress) {
+		this.prepareraddress = prepareraddress;
+	}
+	public String getPreparercity() {
+		return preparercity;
+	}
+	public void setPreparercity(String preparercity) {
+		this.preparercity = preparercity;
+	}
+	public String getPreparerstate() {
+		return preparerstate;
+	}
+	public void setPreparerstate(String preparerstate) {
+		this.preparerstate = preparerstate;}
 
-	@Column(name = "PreparerSignature")
-	private String PreparerSignature;
-
-	@Column(name = "PreparerSignatureDate")
-	private String PreparerSignatureDate;
-
-	@Column(name = "PreparerFirstName")
-	private String PreparerFirstName;
-
-	@Column(name = "PreparerLastName")
-	private String PreparerLastName;
-
-	@Column(name = "PreparerAddress")
-	private String PreparerAddress;
-
-	@Column(name = "PreparerCity")
-	private String PreparerCity;
-
-	@Column(name = "PreparerState")
-	private String PreparerState;
-
-	@Column(name = "PreparerZipCode")
-	private String PreparerZipCode;
-
-	public String getPreparerFirstName() {
-		return PreparerFirstName;
+	public String getPreparerzip() {
+		return preparerzip;
 	}
 
-	public void setPreparerFirstName(String preparerFirstName) {
-		PreparerFirstName = preparerFirstName;
+	public void setPreparerzip(String preparerzip) {
+		this.preparerzip = preparerzip;
 	}
-
-	public String getPreparerLastName() {
-		return PreparerLastName;
-	}
-
-	public void setPreparerLastName(String preparerLastName) {
-		PreparerLastName = preparerLastName;
-	}
-
-	public String getPreparerAddress() {
-		return PreparerAddress;
-	}
-
-	public void setPreparerAddress(String preparerAddress) {
-		PreparerAddress = preparerAddress;
-	}
-
-	public String getPreparerCity() {
-		return PreparerCity;
-	}
-
-	public void setPreparerCity(String preparerCity) {
-		PreparerCity = preparerCity;
-	}
-
-	public String getPreparerState() {
-		return PreparerState;
-	}
-
-	public void setPreparerState(String preparerState) {
-		PreparerState = preparerState;
-	}
-
-	public String getPreparerZipCode() {
-		return PreparerZipCode;
-	}
-
-	public void setPreparerZipCode(String preparerZipCode) {
-		PreparerZipCode = preparerZipCode;
-	}
-
-	public String getPreparerStatus() {
-		return PreparerStatus;
-	}
-
-	public void setPreparerStatus(String preparerStatus) {
-		PreparerStatus = preparerStatus;
-	}
-
-	public String getPreparerSignature() {
-		return PreparerSignature;
-	}
-
-	public void setPreparerSignature(String preparerSignature) {
-		PreparerSignature = preparerSignature;
-	}
-
-	public String getPreparerSignatureDate() {
-		return PreparerSignatureDate;
-	}
-
-	public void setPreparerSignatureDate(String preparerSignatureDate) {
-		PreparerSignatureDate = preparerSignatureDate;
-	}
-
-
 
 	public String getFormadmissionnumber() {
 		return formadmissionnumber;
@@ -302,20 +275,20 @@ public class Employee {
 		this.employeesignaturedate = employeesignaturedate;
 	}
 
-	public String getFirstname() {
-		return firstname;
+	public String getFirst_name() {
+		return first_name;
 	}
 
-	public void setFirstname(String firstname) {
-		this.firstname = firstname;
+	public void setFirst_name(String first_name) {
+		this.first_name = first_name;
 	}
 
-	public String getLastname() {
-		return lastname;
+	public String getLast_name() {
+		return last_name;
 	}
 
-	public void setLastname(String lastname) {
-		this.lastname = lastname;
+	public void setLast_name(String last_name) {
+		this.last_name = last_name;
 	}
 
 	public String getMiddleinitial() {
@@ -366,4 +339,4 @@ public class Employee {
 		this.id = id;
 	}
 
-}*/
+}
