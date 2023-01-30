@@ -1,4 +1,4 @@
-package net.javaguides.i9section2.model;
+/*package net.javaguides.i9section2.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -398,6 +398,6 @@ import javax.persistence.*;
             OrganizationZipCode = organizationZipCode;
         }
     }
-
+*/
 
 
