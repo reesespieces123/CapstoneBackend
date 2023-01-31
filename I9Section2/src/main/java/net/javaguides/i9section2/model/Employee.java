@@ -13,6 +13,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Entity
 @Table(name = "employees")
+
 public class Employee {
 
 	@Id
@@ -104,6 +105,28 @@ public class Employee {
 	private String preparerstate;
 	@Column(name = "preparerzip")
 	private String preparerzip;
+	@Column(name = "i9status")
+	private String i9status;
+	@Column(name = "blacklist")
+	private String blacklist;
+
+	public String getBlacklist() {
+		return blacklist;
+	}
+
+	public void setBlacklist(String blacklist) {
+		this.blacklist = blacklist;
+	}
+
+	public String getI9status() {
+		return i9status;
+	}
+
+	public void setI9status(String i9status) {
+		this.i9status = i9status;
+	}
+
+
 
 	public String getPreparerstatus() {
 		return preparestatus;

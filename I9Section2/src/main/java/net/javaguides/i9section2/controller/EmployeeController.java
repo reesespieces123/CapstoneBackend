@@ -20,23 +20,29 @@ public class EmployeeController {
 	public List<Employee> getAllEmployees() {
 		return EmployeeRepository.findAll();
 	}
+
+
 	// build create employee REST API
 	@PostMapping
 	public Employee createEmployee(@RequestBody Employee employee) {
 		return EmployeeRepository.save(employee);
 	}
+
+
 	// build get employee by id REST API
 	@GetMapping("{id}")
 	public ResponseEntity<Employee> getEmployeeById(@PathVariable long id) {
 		Employee employee = EmployeeRepository.findById(id)
-				.orElseThrow(() -> new ResourceNotFoundException("Employee not exist with id:" + id));
+				.orElseThrow(() -> new ResourceNotFoundException("Employee does not exist with id:" + id));
 		return ResponseEntity.ok(employee);
 	}
+
+
 	// build update employee REST API
 	@PutMapping("{id}")
 	public ResponseEntity<Employee> updateEmployee(@PathVariable long id, @RequestBody Employee employeeDetails) {
 		Employee updateEmployee = EmployeeRepository.findById(id)
-				.orElseThrow(() -> new ResourceNotFoundException("Employee not exist with id: " + id));
+				.orElseThrow(() -> new ResourceNotFoundException("Employee does not exist with id: " + id));
 		updateEmployee.setSocialSecurity(employeeDetails.getSocialSecurity() != null ? employeeDetails.getSocialSecurity() : updateEmployee.getSocialSecurity());
 		updateEmployee.setAddress(employeeDetails.getAddress() != null ? employeeDetails.getAddress() : updateEmployee.getAddress());
 		updateEmployee.setAlienauthorizationnumber(employeeDetails.getAlienauthorizationnumber() != null ? employeeDetails.getAlienauthorizationnumber() : updateEmployee.getAlienauthorizationnumber());
@@ -68,6 +74,8 @@ public class EmployeeController {
 		updateEmployee.setPreparercity(employeeDetails.getPreparercity()  != null ? employeeDetails.getPreparercity(): updateEmployee.getPreparercity());
 		updateEmployee.setPreparerstate(employeeDetails.getPreparerstate()  != null ? employeeDetails.getPreparerstate(): updateEmployee.getPreparerstate());
 		updateEmployee.setPreparerzip(employeeDetails.getPreparerzip() != null ? employeeDetails.getPreparerzip() : updateEmployee.getPreparerzip());
+		updateEmployee.setI9status(employeeDetails.getI9status() != null ? employeeDetails.getI9status() : updateEmployee.getI9status());
+		updateEmployee.setBlacklist(employeeDetails.getBlacklist() != null ? employeeDetails.getBlacklist() : updateEmployee.getBlacklist());
 		EmployeeRepository.save(updateEmployee);
 		return ResponseEntity.ok(updateEmployee);
 	}
@@ -75,7 +83,7 @@ public class EmployeeController {
 	@DeleteMapping("{id}")
 	public ResponseEntity<HttpStatus> deleteEmployee(@PathVariable long id) {
 		Employee employee = EmployeeRepository.findById(id)
-				.orElseThrow(() -> new ResourceNotFoundException("Employee not exist with id: " + id));
+				.orElseThrow(() -> new ResourceNotFoundException("Employee does not exist with id: " + id));
 		EmployeeRepository.delete(employee);
 		return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 	}

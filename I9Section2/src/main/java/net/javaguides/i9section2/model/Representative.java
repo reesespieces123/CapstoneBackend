@@ -5,10 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
 //import javax.persistence.entity;
-
-
 
     @Getter
     @Setter
@@ -379,6 +376,14 @@ import lombok.Setter;
 
         public String getOrganizationZipCode() {
             return OrganizationZipCode;
+        }
+
+        public String getPreparerSignatureDate() {
+            return PreparerSignatureDate;
+        }
+
+        public void setPreparerSignatureDate(String preparerSignatureDate) {
+            PreparerSignatureDate = preparerSignatureDate;
         }
 
         public void setOrganizationZipCode(String organizationZipCode) {
