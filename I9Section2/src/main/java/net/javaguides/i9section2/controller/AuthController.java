@@ -28,7 +28,7 @@ import java.util.stream.Collectors;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
-@RequestMapping("/api/vi")
+@RequestMapping("/api/auth/*")
 public class AuthController {
     @Autowired
     AuthenticationManager authenticationManager;
@@ -73,13 +73,13 @@ public class AuthController {
                     .badRequest()
                     .body(new MessageResponse("Error: Username is already taken!"));
         }
-           System.out.println("IT WORKS");
+
         if (userRepository.existsByEmail(signUpRequest.getEmail())) {
             return ResponseEntity
                     .badRequest()
                     .body(new MessageResponse("Error: Email is already in use!"));
         }
-           System.out.println("IT WORKS at line 82");
+
         // Create new user's account
         User user = new User(signUpRequest.getUsername(),
                 signUpRequest.getEmail(),
@@ -114,7 +114,7 @@ public class AuthController {
                 }
             });
         }
-        System.out.println("IT WORKS at line 116");
+
         user.setRoles(roles);
         userRepository.save(user);
 
