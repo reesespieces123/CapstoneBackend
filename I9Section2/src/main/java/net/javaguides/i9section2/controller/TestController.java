@@ -17,15 +17,28 @@ public class TestController {
     }
 
     @GetMapping("/NewEmployee")
-    @PreAuthorize("hasRole('ROLE_USER') or hasRole('ROLE_MODERATOR') or hasRole('ROLE_ADMIN')")
+    @PreAuthorize("hasRole('ROLE_EMPLOYEE') ")
+//    or hasRole('ROLE_MODERATOR') or hasRole('ROLE_ADMIN')
     public String userAccess() {
         return "User Content.";
     }
 
     @GetMapping("/reviewer")
-    @PreAuthorize("hasRole('ROLE_MODERATOR')")
-    public String moderatorAccess() {
-        return "Moderator Board.";
+    @PreAuthorize("hasRole('ROLE_REVIEWER')")
+    public String reviewerAccess() {
+        return "Reviewer Board.";
+    }
+
+    @GetMapping("/employer")
+    @PreAuthorize("hasRole('ROLE_EMPLOYER')")
+    public String employerAccess() {
+        return "Employer Board.";
+    }
+
+    @GetMapping("/auditor")
+    @PreAuthorize("hasRole('ROLE_AUDITOR')")
+    public String auditorAccess() {
+        return "Auditor Board.";
     }
 
 //    @GetMapping("/admin")

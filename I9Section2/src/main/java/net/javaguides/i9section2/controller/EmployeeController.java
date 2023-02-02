@@ -19,8 +19,8 @@ public class EmployeeController {
 	private EmployeeRepository EmployeeRepository;
 
 
-	@GetMapping("admin")
-	@PreAuthorize("hasRole('ROLE_ADMIN')")
+	@GetMapping("rev")
+	@PreAuthorize("hasRole('ROLE_REVIEWER')")
 	public List<Employee> getAllEmployees() {
 		return EmployeeRepository.findAll();
 	}
