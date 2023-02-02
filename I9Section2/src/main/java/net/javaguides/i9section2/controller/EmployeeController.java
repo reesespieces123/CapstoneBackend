@@ -13,13 +13,13 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 @CrossOrigin("*")
 @RestController
-@RequestMapping("/api/test")
+@RequestMapping("/api/test/")
 public class EmployeeController {
 	@Autowired
 	private EmployeeRepository EmployeeRepository;
 
 
-	@GetMapping("/admin")
+	@GetMapping("admin")
 	@PreAuthorize("hasRole('ROLE_ADMIN')")
 	public List<Employee> getAllEmployees() {
 		return EmployeeRepository.findAll();
