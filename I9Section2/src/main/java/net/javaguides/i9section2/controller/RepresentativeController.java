@@ -16,40 +16,40 @@ import java.util.List;
 @RequestMapping("/api/testrep")
 public class RepresentativeController {
     @Autowired
-    private RepresentativeRepository representativeRepository;
+    private RepresentativeRepository RepresentativeRepository;
 
 
     @GetMapping("/representative")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     public List<Representative> getAllRepresentative() {
-        return representativeRepository.findAll();
+        return RepresentativeRepository.findAll();
     }
     // build create representative REST API
 
 
     @PostMapping
     public Representative createRepresentative(@RequestBody Representative representative) {
-        return representativeRepository.save(representative);
+        return RepresentativeRepository.save(representative);
     }
     // build get representative by id REST API
     @GetMapping("{id}")
     public ResponseEntity<Representative> getRepresentativeById(@PathVariable long id) {
-        Representative representative = representativeRepository.findById(id)
+        Representative representative = RepresentativeRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Representative not exist with id:" + id));
         return ResponseEntity.ok(representative);
     }
     // build update employee REST API
     @PutMapping("{id}")
     public ResponseEntity<Representative> updateRepresentative(@PathVariable long id, @RequestBody Representative representativeDetails) {
-        Representative updateRepresentative = representativeRepository.findById(id)
+        Representative updateRepresentative = RepresentativeRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Employee not exist with id: " + id));
         //Using this area for LIST 1A -- duplicate naming conventions used... Identity and Employment Authorization
-        updateRepresentative.setDocument_title_a1(representativeDetails.getDocument_title_a1());
+        updateRepresentative.setDocumenttitle_a1(representativeDetails.getDocumenttitle_a1());
         updateRepresentative.setIssuingauthority_a1(representativeDetails.getIssuingauthority_a1());
         updateRepresentative.setDocumentnumber_a1(representativeDetails.getDocumentnumber_a1());
         updateRepresentative.setExpirationdate_a1(representativeDetails.getExpirationdate_a1());
         //Using this area for LIST 1B -- duplicate naming conventions used... we need to distinguish between the different documents etc.
-        updateRepresentative.setDocument_title_a2(representativeDetails.getDocument_title_a2());
+        updateRepresentative.setDocumenttitle_a2(representativeDetails.getDocumenttitle_a2());
         updateRepresentative.setIssuingauthority_a2(representativeDetails.getIssuingauthority_a2());
         updateRepresentative.setDocumentnumber_a2(representativeDetails.getDocumentnumber_a2());
         updateRepresentative.setExpirationdate_a2(representativeDetails.getExpirationdate_a2());
@@ -81,15 +81,15 @@ public class RepresentativeController {
         updateRepresentative.setOrganizationstate(representativeDetails.getOrganizationstate());
         updateRepresentative.setOrganizationzipcode(representativeDetails.getOrganizationzipcode());
         updateRepresentative.setId(representativeDetails.getId());
-        representativeRepository.save(updateRepresentative);
+        RepresentativeRepository.save(updateRepresentative);
         return ResponseEntity.ok(updateRepresentative);
     }
     // build delete employee REST API
     @DeleteMapping("{id}")
     public ResponseEntity<HttpStatus> deleteRepresentative(@PathVariable long id) {
-        Representative representative = representativeRepository.findById(id)
+        Representative representative = RepresentativeRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Representative not exist with id: " + id));
-        representativeRepository.delete(representative);
+        RepresentativeRepository.delete(representative);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 }

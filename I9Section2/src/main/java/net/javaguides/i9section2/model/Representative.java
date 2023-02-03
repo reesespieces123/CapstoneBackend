@@ -13,14 +13,14 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "representative")
+@Table(name = "representatives")
 public class Representative {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     //_A1
-    @Column(name = "document_title_a1")
-    private String document_title_a1;
+    @Column(name = "documenttitle_a1")
+    private String documenttitle_a1;
     @Column(name = "issuingauthority_a1")
     private String issuingauthority_a1;
     @Column(name = "documentnumber_a1")
@@ -28,8 +28,8 @@ public class Representative {
     @Column(name = "expirationdate_a1")
     private String expirationdate_a1;
     // _A2
-    @Column(name = "document_title_a2")
-    private String document_title_a2;
+    @Column(name = "documenttitle_a2")
+    private String documenttitle_a2;
     @Column(name = "issuingauthority_a2")
     private String issuingauthority_a2;
     @Column(name = "documentnumber_a2")
@@ -92,10 +92,10 @@ public class Representative {
         this.id = id;
     }
     public String getDocumenttitle_a1() {
-        return document_title_a1;
+        return documenttitle_a1;
     }
-    public void setDocument_title_a1(String document_title_a1) {
-        this.document_title_a1 = document_title_a1;
+    public void setDocumenttitle_a1(String documenttitle_a1) {
+        this.documenttitle_a1 = documenttitle_a1;
     }
     public String getIssuingauthority_a1() {
         return issuingauthority_a1;
@@ -115,11 +115,11 @@ public class Representative {
     public void setExpirationdate_a1(String expirationdate_a1) {
         this.expirationdate_a1 = expirationdate_a1;
     }
-    public String getDocument_title_a2() {
-        return document_title_a2;
+    public String getDocumenttitle_a2() {
+        return documenttitle_a2;
     }
-    public void setDocument_title_a2(String document_title_a2) {
-        this.document_title_a2 = document_title_a2;
+    public void setDocumenttitle_a2(String documenttitle_a2) {
+        this.documenttitle_a2 = documenttitle_a2;
     }
     public String getIssuingauthority_a2() {
         return issuingauthority_a2;
