@@ -1,8 +1,8 @@
 package net.javaguides.i9section2.model;
 
 public enum ERole {
-    ROLE_EMPLOYEE,
-    ROLE_REVIEWER,
-    ROLE_EMPLOYER,
-    ROLE_AUDITOR
+    ROLE_USER,
+    ROLE_MODERATOR,
+    ROLE_ADMIN
+//    ROLE_AUDITOR
 }

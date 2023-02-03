@@ -6,21 +6,27 @@ import net.javaguides.i9section2.repository.RepresentativeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @CrossOrigin("*")
 @RestController
-@RequestMapping("/api/v1/representative")
+@RequestMapping("/api/testrep")
 public class RepresentativeController {
     @Autowired
     private RepresentativeRepository representativeRepository;
-    @GetMapping
+
+
+    @GetMapping("/representative")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     public List<Representative> getAllRepresentative() {
         return representativeRepository.findAll();
     }
     // build create representative REST API
+
+
     @PostMapping
     public Representative createRepresentative(@RequestBody Representative representative) {
         return representativeRepository.save(representative);
