@@ -7,389 +7,274 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 //import javax.persistence.entity;
 
-    @Getter
-    @Setter
-    @NoArgsConstructor
-    @AllArgsConstructor
-    @Entity
-    @Table(name = "representative")
-
-    public class Representative {
-
-        @Id
-        @GeneratedValue(strategy = GenerationType.IDENTITY)
-        private long id;
-        //_A1
-        @Column(name = "DocumentTitle_A1")
-        private String DocumentTitle_A1;
-
-        @Column(name = "IssuingAuthority_A1")
-        private String IssuingAuthority_A1;
-
-        @Column(name = "DocumentNumber_A1")
-        private String DocumentNumber_A1;
-
-        @Column(name = "ExpirationDate_A1")
-        private String ExpirationDate_A1;
-        // _A2
-        @Column(name = "DocumentTitle_A2")
-        private String DocumentTitle_A2;
-
-
-        @Column(name = "IssuingAuthority_A2")
-        private String IssuingAuthority_A2;
-
-        @Column(name = "DocumentNumber_A2")
-        private String DocumentNumber_A2;
-
-        @Column(name = "ExpirationDate_A2")
-        private String ExpirationDate_A2;
-
-        @Column(name = "DocumentTitle_A3")
-        private String DocumentTitle_A3;
-
-        @Column(name = "IssuingAuthority_A3")
-        private String IssuingAuthority_A3;
-
-        @Column(name = "DocumentNumber_A3")
-        private String DocumentNumber_A3;
-
-        @Column(name = "ExpirationDate_A3")
-        private String ExpirationDate_A3;
-
-        // Using this area for LIST B -- Identity
-        @Column(name = "DocumentTitle_B")
-        private String DocumentTitle_B;
-
-        @Column(name = "IssuingAuthority_B")
-        private String IssuingAuthority_B;
-
-        @Column(name = "DocumentNumber_B")
-        private String DocumentNumber_B;
-
-        @Column(name = "ExpirationDate_B")
-        private String ExpirationDate_B;
-
-        @Column(name = "AdditionalInfo_B")
-        private String AdditionalInfo_B;
-
-        // Using this area for LIST C -- Employment Authorization
-
-
-        @Column(name = "DocumentTitle_C")
-        private String DocumentTitle_C;
-
-        @Column(name = "IssuingAuthority_C")
-        private String IssuingAuthority_C;
-
-        @Column(name = "DocumentNumber_C")
-        private String DocumentNumber_C;
-
-        @Column(name = "ExpirationDate_C")
-        private String ExpirationDate_C;
-
-        // Using this area for Certification Area
-
-        @Column(name = "RepresentativeSignature")
-        private String RepresentativeSignature;
-
-        @Column(name = "RepresentativeSignDate")
-        private String RepresentativeSignDate;
-
-        @Column(name = "PreparerSignatureDate")
-        private String PreparerSignatureDate;
-
-        @Column(name = "RepresentativeTitle")
-        private String RepresentativeTitle;
-
-        @Column(name = "RepresentativeFirstName")
-        private String RepresentativeFirstName;
-
-        @Column(name = "RepresentativeLastName")
-        private String RepresentativeLastName;
-
-        @Column(name = "OrganizationName")
-        private String OrganizationName;
-
-        @Column(name = "OrganizationAddress")
-        private String OrganizationAddress;
-
-        @Column(name = "OrganizationCity")
-        private String OrganizationCity;
-
-        @Column(name = "OrganizationState")
-        private String OrganizationState;
-
-        @Column(name = "OrganizationZipCode")
-        private String OrganizationZipCode;
-
-        public long getId() {
-            return id;
-        }
-
-        public void setId(long id) {
-            this.id = id;
-        }
-
-        public String getDocumentTitle_A1() {
-            return DocumentTitle_A1;
-        }
-
-        public void setDocumentTitle_A1(String documentTitle_A1) {
-            DocumentTitle_A1 = documentTitle_A1;
-        }
-
-        public String getIssuingAuthority_A1() {
-            return IssuingAuthority_A1;
-        }
-
-        public void setIssuingAuthority_A1(String issuingAuthority_A1) {
-            IssuingAuthority_A1 = issuingAuthority_A1;
-        }
-
-        public String getDocumentNumber_A1() {
-            return DocumentNumber_A1;
-        }
-
-        public void setDocumentNumber_A1(String documentNumber_A1) {
-            DocumentNumber_A1 = documentNumber_A1;
-        }
-
-        public String getExpirationDate_A1() {
-            return ExpirationDate_A1;
-        }
-
-        public void setExpirationDate_A1(String expirationDate_A1) {
-            ExpirationDate_A1 = expirationDate_A1;
-        }
-
-        public String getDocumentTitle_A2() {
-            return DocumentTitle_A2;
-        }
-
-        public void setDocumentTitle_A2(String documentTitle_A2) {
-            DocumentTitle_A2 = documentTitle_A2;
-        }
-
-        public String getIssuingAuthority_A2() {
-            return IssuingAuthority_A2;
-        }
-
-        public void setIssuingAuthority_A2(String issuingAuthority_A2) {
-            IssuingAuthority_A2 = issuingAuthority_A2;
-        }
-
-        public String getDocumentNumber_A2() {
-            return DocumentNumber_A2;
-        }
-
-        public void setDocumentNumber_A2(String documentNumber_A2) {
-            DocumentNumber_A2 = documentNumber_A2;
-        }
-
-        public String getExpirationDate_A2() {
-            return ExpirationDate_A2;
-        }
-
-        public void setExpirationDate_A2(String expirationDate_A2) {
-            ExpirationDate_A2 = expirationDate_A2;
-        }
-
-        public String getDocumentTitle_A3() {
-            return DocumentTitle_A3;
-        }
-
-        public void setDocumentTitle_A3(String documentTitle_A3) {
-            DocumentTitle_A3 = documentTitle_A3;
-        }
-
-        public String getIssuingAuthority_A3() {
-            return IssuingAuthority_A3;
-        }
-
-        public void setIssuingAuthority_A3(String issuingAuthority_A3) {
-            IssuingAuthority_A3 = issuingAuthority_A3;
-        }
-
-        public String getDocumentNumber_A3() {
-            return DocumentNumber_A3;
-        }
-
-        public void setDocumentNumber_A3(String documentNumber_A3) {
-            DocumentNumber_A3 = documentNumber_A3;
-        }
-
-        public String getExpirationDate_A3() {
-            return ExpirationDate_A3;
-        }
-
-        public void setExpirationDate_A3(String expirationDate_A3) {
-            ExpirationDate_A3 = expirationDate_A3;
-        }
-
-        public String getDocumentTitle_B() {
-            return DocumentTitle_B;
-        }
-
-        public void setDocumentTitle_B(String documentTitle_B) {
-            DocumentTitle_B = documentTitle_B;
-        }
-
-        public String getIssuingAuthority_B() {
-            return IssuingAuthority_B;
-        }
-
-        public void setIssuingAuthority_B(String issuingAuthority_B) {
-            IssuingAuthority_B = issuingAuthority_B;
-        }
-
-        public String getDocumentNumber_B() {
-            return DocumentNumber_B;
-        }
-
-        public void setDocumentNumber_B(String documentNumber_B) {
-            DocumentNumber_B = documentNumber_B;
-        }
-
-        public String getExpirationDate_B() {
-            return ExpirationDate_B;
-        }
-
-        public void setExpirationDate_B(String expirationDate_B) {
-            ExpirationDate_B = expirationDate_B;
-        }
-
-        public String getAdditionalInfo_B() {
-            return AdditionalInfo_B;
-        }
-
-        public void setAdditionalInfo_B(String additionalInfo_B) {
-            AdditionalInfo_B = additionalInfo_B;
-        }
-
-
-        public String getDocumentTitle_C() {
-            return DocumentTitle_C;
-        }
-
-        public void setDocumentTitle_C(String documentTitle_C) {
-            DocumentTitle_C = documentTitle_C;
-        }
-
-        public String getIssuingAuthority_C() {
-            return IssuingAuthority_C;
-        }
-
-        public void setIssuingAuthority_C(String issuingAuthority_C) {
-            IssuingAuthority_C = issuingAuthority_C;
-        }
-
-        public String getDocumentNumber_C() {
-            return DocumentNumber_C;
-        }
-
-        public void setDocumentNumber_C(String documentNumber_C) {
-            DocumentNumber_C = documentNumber_C;
-        }
-
-        public String getExpirationDate_C() {
-            return ExpirationDate_C;
-        }
-
-        public void setExpirationDate_C(String expirationDate_C) {
-            ExpirationDate_C = expirationDate_C;
-        }
-
-        public String getRepresentativeSignature() {
-            return RepresentativeSignature;
-        }
-
-        public void setRepresentativeSignature(String representativeSignature) {
-            RepresentativeSignature = representativeSignature;
-        }
-
-        public String getRepresentativeSignDate() {
-            return RepresentativeSignDate;
-        }
-
-        public void setRepresentativeSignDate(String representativeSignDate) {
-            RepresentativeSignDate = representativeSignDate;
-        }
-
-
-
-        public String getRepresentativeTitle() {
-            return RepresentativeTitle;
-        }
-
-        public void setRepresentativeTitle(String representativeTitle) {
-            RepresentativeTitle = representativeTitle;
-        }
-
-        public String getRepresentativeFirstName() {
-            return RepresentativeFirstName;
-        }
-
-        public void setRepresentativeFirstName(String representativeFirstName) {
-            RepresentativeFirstName = representativeFirstName;
-        }
-
-        public String getRepresentativeLastName() {
-            return RepresentativeLastName;
-        }
-
-        public void setRepresentativeLastName(String representativeLastName) {
-            RepresentativeLastName = representativeLastName;
-        }
-
-        public String getOrganizationName() {
-            return OrganizationName;
-        }
-
-        public void setOrganizationName(String organizationName) {
-            OrganizationName = organizationName;
-        }
-
-        public String getOrganizationAddress() {
-            return OrganizationAddress;
-        }
-
-        public void setOrganizationAddress(String organizationAddress) {
-            OrganizationAddress = organizationAddress;
-        }
-
-        public String getOrganizationCity() {
-            return OrganizationCity;
-        }
-
-        public void setOrganizationCity(String organizationCity) {
-            OrganizationCity = organizationCity;
-        }
-
-        public String getOrganizationState() {
-            return OrganizationState;
-        }
-
-        public void setOrganizationState(String organizationState) {
-            OrganizationState = organizationState;
-        }
-
-        public String getOrganizationZipCode() {
-            return OrganizationZipCode;
-        }
-
-        public String getPreparerSignatureDate() {
-            return PreparerSignatureDate;
-        }
-
-        public void setPreparerSignatureDate(String preparerSignatureDate) {
-            PreparerSignatureDate = preparerSignatureDate;
-        }
-
-        public void setOrganizationZipCode(String organizationZipCode) {
-            OrganizationZipCode = organizationZipCode;
-        }
+//import javax.persistence.entity;
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "representative")
+public class Representative {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+    //_A1
+    @Column(name = "document_title_a1")
+    private String document_title_a1;
+    @Column(name = "issuingauthority_a1")
+    private String issuingauthority_a1;
+    @Column(name = "documentnumber_a1")
+    private String documentnumber_a1;
+    @Column(name = "expirationdate_a1")
+    private String expirationdate_a1;
+    // _A2
+    @Column(name = "document_title_a2")
+    private String document_title_a2;
+    @Column(name = "issuingauthority_a2")
+    private String issuingauthority_a2;
+    @Column(name = "documentnumber_a2")
+    private String documentnumber_a2;
+    @Column(name = "expirationdate_a2")
+    private String expirationdate_a2;
+    @Column(name = "documenttitle_a3")
+    private String documenttitle_a3;
+    @Column(name = "issuingauthority_a3")
+    private String issuingauthority_a3;
+    @Column(name = "documentnumber_a3")
+    private String documentnumber_a3;
+    @Column(name = "expirationdate_a3")
+    private String expirationdate_a3;
+    // Using this area for LIST B -- Identity
+    @Column(name = "documenttitle_b")
+    private String documenttitle_b;
+    @Column(name = "issuingauthority_b")
+    private String issuingauthority_b;
+    @Column(name = "documentnumber_b")
+    private String documentnumber_b;
+    @Column(name = "expirationdate_b")
+    private String expirationdate_b;
+    @Column(name = "additionalinfo_b")
+    private String additionalinfo_b;
+    // Using this area for LIST C -- Employment Authorization
+    @Column(name = "documenttitle_c")
+    private String documenttitle_c;
+    @Column(name = "issuingauthority_c")
+    private String issuingauthority_c;
+    @Column(name = "documentnumber_c")
+    private String documentnumber_c;
+    @Column(name = "expirationdate_c")
+    private String expirationdate_c;
+    // Using this area for Certification Area
+    @Column(name = "representativesignature")
+    private String representativesignature;
+    @Column(name = "representativesigndate")
+    private String representativesigndate;
+    @Column(name = "representativetitle")
+    private String representativetitle;
+    @Column(name = "representativefirstname")
+    private String representativefirstname;
+    @Column(name = "representativelastname")
+    private String representativelastname;
+    @Column(name = "organizationname")
+    private String organizationname;
+    @Column(name = "organizationaddress")
+    private String organizationaddress;
+    @Column(name = "organizationcity")
+    private String organizationcity;
+    @Column(name = "organizationstate")
+    private String organizationstate;
+    @Column(name = "organizationzipcode")
+    private String organizationzipcode;
+    public long getId() {
+        return id;
     }
-
-
-
+    public void setId(long id) {
+        this.id = id;
+    }
+    public String getDocumenttitle_a1() {
+        return document_title_a1;
+    }
+    public void setDocument_title_a1(String document_title_a1) {
+        this.document_title_a1 = document_title_a1;
+    }
+    public String getIssuingauthority_a1() {
+        return issuingauthority_a1;
+    }
+    public void setIssuingauthority_a1(String issuingauthority_a1) {
+        this.issuingauthority_a1 = issuingauthority_a1;
+    }
+    public String getDocumentnumber_a1() {
+        return documentnumber_a1;
+    }
+    public void setDocumentnumber_a1(String documentnumber_a1) {
+        this.documentnumber_a1 = documentnumber_a1;
+    }
+    public String getExpirationdate_a1() {
+        return expirationdate_a1;
+    }
+    public void setExpirationdate_a1(String expirationdate_a1) {
+        this.expirationdate_a1 = expirationdate_a1;
+    }
+    public String getDocument_title_a2() {
+        return document_title_a2;
+    }
+    public void setDocument_title_a2(String document_title_a2) {
+        this.document_title_a2 = document_title_a2;
+    }
+    public String getIssuingauthority_a2() {
+        return issuingauthority_a2;
+    }
+    public void setIssuingauthority_a2(String issuingauthority_a2) {
+        this.issuingauthority_a2 = issuingauthority_a2;
+    }
+    public String getDocumentnumber_a2() {
+        return documentnumber_a2;
+    }
+    public void setDocumentnumber_a2(String documentnumber_a2) {
+        this.documentnumber_a2 = documentnumber_a2;
+    }
+    public String getExpirationdate_a2() {
+        return expirationdate_a2;
+    }
+    public void setExpirationdate_a2(String expirationDate_a2) {
+        this.expirationdate_a2 = expirationdate_a2;
+    }
+    public String getDocumenttitle_a3() {
+        return documenttitle_a3;
+    }
+    public void setDocumenttitle_a3(String documenttitle_a3) {
+        this.documenttitle_a3 = documenttitle_a3;
+    }
+    public String getIssuingauthority_a3() {
+        return issuingauthority_a3;
+    }
+    public void setIssuingauthority_a3(String issuingauthority_a3) {
+        this.issuingauthority_a3 = issuingauthority_a3;
+    }
+    public String getDocumentnumber_a3() {
+        return documentnumber_a3;
+    }
+    public void setDocumentnumber_a3(String documentnumber_a3) {
+        this.documentnumber_a3 = documentnumber_a3;
+    }
+    public String getExpirationdate_a3() {
+        return expirationdate_a3;
+    }
+    public void setExpirationdate_a3(String expirationdate_a3) {
+        this.expirationdate_a3 = expirationdate_a3;
+    }
+    public String getDocumenttitle_b() {
+        return documenttitle_b;
+    }
+    public void setDocumenttitle_b(String documenttitle_b) {
+        this.documenttitle_b = documenttitle_b;
+    }
+    public String getIssuingauthority_b() {
+        return issuingauthority_b;
+    }
+    public void setIssuingauthority_b(String issuingauthority_b) {
+        this.issuingauthority_b = issuingauthority_b;
+    }
+    public String getDocumentnumber_b() {
+        return documentnumber_b;
+    }
+    public void setDocumentnumber_b(String documentnumber_b) {
+        this.documentnumber_b = documentnumber_b;
+    }
+    public String getExpirationdate_b() {
+        return expirationdate_b;
+    }
+    public void setExpirationdate_b(String expirationdate_b) {
+        this.expirationdate_b = expirationdate_b;
+    }
+    public String getAdditionalinfo_b() {
+        return additionalinfo_b;
+    }
+    public void setAdditionalinfo_b(String additionalinfo_b) {
+        this.additionalinfo_b = additionalinfo_b;
+    }
+    public String getDocumenttitle_c() {
+        return documenttitle_c;
+    }
+    public void setDocumenttitle_c(String documenttitle_c) {
+        this.documenttitle_c = documenttitle_c;
+    }
+    public String getIssuingauthority_c() {
+        return issuingauthority_c;
+    }
+    public void setIssuingauthority_c(String issuingauthority_c) {
+        this.issuingauthority_c = issuingauthority_c;
+    }
+    public String getDocumentnumber_c() {
+        return documentnumber_c;
+    }
+    public void setDocumentnumber_c(String documentnumber_c) {
+        this.documentnumber_c = documentnumber_c;
+    }
+    public String getExpirationdate_c() {
+        return expirationdate_c;
+    }
+    public void setExpirationdate_c(String expirationdate_c) {
+        this.expirationdate_c = expirationdate_c;
+    }
+    public String getRepresentativesignature() {
+        return representativesignature;
+    }
+    public void setRepresentativesignature(String representativesignature) {
+        this.representativesignature = representativesignature;
+    }
+    public String getRepresentativesigndate() {
+        return representativesigndate;
+    }
+    public void setRepresentativesigndate(String representativesigndate) {
+        this.representativesigndate = representativesigndate;
+    }
+    public String getRepresentativetitle() {
+        return representativetitle;
+    }
+    public void setRepresentativetitle(String representativetitle) {
+        this.representativetitle = representativetitle;
+    }
+    public String getRepresentativefirstname() {
+        return representativefirstname;
+    }
+    public void setRepresentativefirstname(String representativefirstname) {
+        this.representativefirstname = representativefirstname;
+    }
+    public String getRepresentativelastname() {
+        return representativelastname;
+    }
+    public void setRepresentativelastname(String representativelastname) {
+        this.representativelastname = representativelastname;
+    }
+    public String getOrganizationname() {
+        return organizationname;
+    }
+    public void setOrganizationname(String organizationname) {
+        this.organizationname = organizationname;
+    }
+    public String getOrganizationaddress() {
+        return organizationaddress;
+    }
+    public void setOrganizationaddress(String organizationAddress) {
+        this.organizationaddress = organizationaddress;
+    }
+    public String getOrganizationcity() {
+        return organizationcity;
+    }
+    public void setOrganizationcity(String organizationcity) {
+        this.organizationcity = organizationcity;
+    }
+    public String getOrganizationstate() {
+        return organizationstate;
+    }
+    public void setOrganizationstate(String organizationstate) {
+        this.organizationstate = organizationstate;
+    }
+    public String getOrganizationzipcode() {
+        return organizationzipcode;
+    }
+    public void setOrganizationzipcode(String organizationzipcode) {
+        this.organizationzipcode = organizationzipcode;
+    }
+}
