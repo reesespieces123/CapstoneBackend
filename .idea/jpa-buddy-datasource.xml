@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JpbDataSourceConfig">
+    <data-sources>
+      <data-source id="ba572a82-4700-4364-a4aa-d06a637712d9" name="I9possibility2" url="jdbc:mysql://localhost:3306/i-9db?useSSL=false&amp;allowMultiQueries=true&amp;serverTimezone=UTC" driverClass="com.mysql.jdbc.Driver" />
+    </data-sources>
+    <data-source-infos>
+      <data-source-info id="ba572a82-4700-4364-a4aa-d06a637712d9" persistence-unit-name="Default" />
+    </data-source-infos>
+  </component>
+</project>
